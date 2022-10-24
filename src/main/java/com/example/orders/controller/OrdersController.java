@@ -15,7 +15,7 @@ public class OrdersController {
 
     @GetMapping("/customer/{customerId}")
     public ResponseEntity<?> getCustomerDetail(@PathVariable String customerId) {
-        return new ResponseEntity<>(customerService.getCustomer(customerId), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(customerService.getCustomer(), HttpStatus.ACCEPTED);
     }
 
 }
